@@ -8,7 +8,7 @@ piggyBank = {
 }
 
 def calc_coins(dollarAmount, **piggyBank):
-    for coins, amount in piggyBank.items():
+    for coins in piggyBank.keys():
         dollarsX100 = dollarAmount * 100
         remainingMoney = 0
 
