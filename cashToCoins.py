@@ -9,12 +9,12 @@ piggyBank = {
 
 def calc_coins(dollarAmount, **piggyBank):
     for coins in piggyBank.keys():
-        dollarsX100 = dollarAmount * 100
+        cents = dollarAmount * 100
         remainingMoney = 0
 
         if coins == "quarters":
-            piggyBank["quarters"] = int(dollarsX100 / 25)
-            remainingMoney += dollarsX100 % 25
+            piggyBank["quarters"] = int(cents / 25)
+            remainingMoney += cents % 25
             
             if remainingMoney != 0:
                 piggyBank["dimes"] = int(remainingMoney / 10)
