@@ -1,5 +1,3 @@
-import math
-
 dollarAmount = 8.69
 
 piggyBank = {
@@ -8,10 +6,6 @@ piggyBank = {
     "dimes": 0,
     "quarters": 0
 }
-
-def round_down(n, decimals=0):
-    multiplier = 10 ** decimals
-    return math.floor(n * multiplier) / multiplier
 
 def calc_coins(dollarAmount, **piggyBank):
     for coins, amount in piggyBank.items():
